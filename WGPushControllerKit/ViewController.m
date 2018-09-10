@@ -6,9 +6,24 @@
 //  Copyright © 2018年 wanggang. All rights reserved.
 //
 
-#import "ViewController.h"
+//属性传值关键字
+#define WGProperty @"property"
+//修改初始化方法关键字
+#define WGInitWith @"initWith"
 
-@interface ViewController ()
+#define WGSCREEN [UIScreen mainScreen].bounds.size
+#define WGWIDTH [UIScreen mainScreen].bounds.size.width
+#define WGHEIGHT [UIScreen mainScreen].bounds.size.height
+#define WGNAVHEIGHT (WGHEIGHT==812?88:64) //顶部导航栏高度
+
+#import "ViewController.h"
+#import "WGControllerPush.h"
+#import "WGModel.h"
+
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataArr;
 
 @end
 
@@ -16,13 +31,118 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setBaseView];
+    [self loadData];
 }
 
+- (void)setBaseView{
+    self.title = @"ViewController";
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData{
+    self.dataArr = @[@"不传值", @"只有属性传值", @"只有initWith传值", @"既有property又有initWith方式传值"];
+}
+
+#pragma mark -<UITableViewDelegate, UITableViewDataSource>
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataArr.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    
+    cell.textLabel.text = [self.dataArr objectAtIndex:indexPath.row];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0:{
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGNoParamViewController"];
+            break;
+        }case 1:{
+            NSDictionary *paramDic = @{
+                                    WGProperty:@{
+                                            @"school":@"太和一中",
+                                            @"name":@"小明",
+                                            @"age":@(18)
+                                                     }
+                                    };
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGProrertyViewController" paramType:WGPushProperty param:paramDic];
+            break;
+        }case 2:{
+            
+            
+            WGModel *model = [[WGModel alloc] init];
+            model.name = @"小明";
+            model.age = 18;
+            NSDictionary *paramDic = @{
+                                       WGInitWith:@{
+                                               @"initWithDic:model:school:":@[
+                                                       @{
+                                                           @"height":@(178),
+                                                           @"address":@"人民路"
+                                                        },
+                                                       model,
+                                                       @"太和一中"
+                                                       ]
+                                               }
+                                       };
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGInitWithViewController" paramType:WGPushInit param:paramDic];
+            break;
+        }case 3:{
+            NSDictionary *paramDic = @{
+                                       WGInitWith:@{
+                                               @"initWithDic:name:":@[
+                                                       @{
+                                                           @"height":@(178),
+                                                           @"address":@"人民路",
+                                                           @"hasGirFirend":@(NO)
+                                                           },
+                                                       @"小明"
+                                                       ]
+                                               },
+                                       WGProperty:@{
+                                               @"school":@"太和一中",
+                                               @"age":@(18),
+                                               @"isMale":@(YES)
+                                               }
+                                       };
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGOtherViewController" paramType:WGPushOther param:paramDic];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+#pragma mark -懒加载
+-(UITableView *)tableView{
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WGWIDTH, WGHEIGHT) style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    }
+    return _tableView;
+}
+
+-(NSArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [[NSArray alloc] init];
+    }
+    return _dataArr;
 }
 
 

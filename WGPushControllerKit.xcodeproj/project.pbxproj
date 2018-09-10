@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E4E2141192D00489A79 /* WGNoParamViewController.m */; };
+		325E6E522141194400489A79 /* WGProrertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E512141194300489A79 /* WGProrertyViewController.m */; };
+		325E6E552141195500489A79 /* WGInitWithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E542141195500489A79 /* WGInitWithViewController.m */; };
+		325E6E582141196700489A79 /* WGOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E572141196700489A79 /* WGOtherViewController.m */; };
+		325E6E5B21411D1700489A79 /* WGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E5A21411D1700489A79 /* WGModel.m */; };
 		32C9CE4B213F843900B22E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE4A213F843900B22E4C /* AppDelegate.m */; };
 		32C9CE4E213F843900B22E4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE4D213F843900B22E4C /* ViewController.m */; };
 		32C9CE51213F843900B22E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C9CE4F213F843900B22E4C /* Main.storyboard */; };
@@ -15,6 +20,7 @@
 		32C9CE59213F843C00B22E4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE58213F843C00B22E4C /* main.m */; };
 		32C9CE63213F843C00B22E4C /* WGPushControllerKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE62213F843C00B22E4C /* WGPushControllerKitTests.m */; };
 		32C9CE6E213F843C00B22E4C /* WGPushControllerKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE6D213F843C00B22E4C /* WGPushControllerKitUITests.m */; };
+		32C9CE81213F9C2F00B22E4C /* WGControllerPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE80213F9C2F00B22E4C /* WGControllerPush.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325E6E4D2141192D00489A79 /* WGNoParamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGNoParamViewController.h; sourceTree = "<group>"; };
+		325E6E4E2141192D00489A79 /* WGNoParamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGNoParamViewController.m; sourceTree = "<group>"; };
+		325E6E502141194300489A79 /* WGProrertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGProrertyViewController.h; sourceTree = "<group>"; };
+		325E6E512141194300489A79 /* WGProrertyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGProrertyViewController.m; sourceTree = "<group>"; };
+		325E6E532141195500489A79 /* WGInitWithViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGInitWithViewController.h; sourceTree = "<group>"; };
+		325E6E542141195500489A79 /* WGInitWithViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGInitWithViewController.m; sourceTree = "<group>"; };
+		325E6E562141196700489A79 /* WGOtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGOtherViewController.h; sourceTree = "<group>"; };
+		325E6E572141196700489A79 /* WGOtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGOtherViewController.m; sourceTree = "<group>"; };
+		325E6E5921411D1700489A79 /* WGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGModel.h; sourceTree = "<group>"; };
+		325E6E5A21411D1700489A79 /* WGModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGModel.m; sourceTree = "<group>"; };
 		32C9CE46213F843900B22E4C /* WGPushControllerKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGPushControllerKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C9CE49213F843900B22E4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32C9CE4A213F843900B22E4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +67,8 @@
 		32C9CE69213F843C00B22E4C /* WGPushControllerKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGPushControllerKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C9CE6D213F843C00B22E4C /* WGPushControllerKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGPushControllerKitUITests.m; sourceTree = "<group>"; };
 		32C9CE6F213F843C00B22E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C9CE7F213F9C2F00B22E4C /* WGControllerPush.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGControllerPush.h; sourceTree = "<group>"; };
+		32C9CE80213F9C2F00B22E4C /* WGControllerPush.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGControllerPush.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +119,21 @@
 		32C9CE48213F843900B22E4C /* WGPushControllerKit */ = {
 			isa = PBXGroup;
 			children = (
+				32C9CE7E213F9BAA00B22E4C /* PushTools */,
 				32C9CE49213F843900B22E4C /* AppDelegate.h */,
 				32C9CE4A213F843900B22E4C /* AppDelegate.m */,
 				32C9CE4C213F843900B22E4C /* ViewController.h */,
 				32C9CE4D213F843900B22E4C /* ViewController.m */,
+				325E6E4D2141192D00489A79 /* WGNoParamViewController.h */,
+				325E6E4E2141192D00489A79 /* WGNoParamViewController.m */,
+				325E6E502141194300489A79 /* WGProrertyViewController.h */,
+				325E6E512141194300489A79 /* WGProrertyViewController.m */,
+				325E6E532141195500489A79 /* WGInitWithViewController.h */,
+				325E6E542141195500489A79 /* WGInitWithViewController.m */,
+				325E6E562141196700489A79 /* WGOtherViewController.h */,
+				325E6E572141196700489A79 /* WGOtherViewController.m */,
+				325E6E5921411D1700489A79 /* WGModel.h */,
+				325E6E5A21411D1700489A79 /* WGModel.m */,
 				32C9CE4F213F843900B22E4C /* Main.storyboard */,
 				32C9CE52213F843C00B22E4C /* Assets.xcassets */,
 				32C9CE54213F843C00B22E4C /* LaunchScreen.storyboard */,
@@ -130,6 +159,15 @@
 				32C9CE6F213F843C00B22E4C /* Info.plist */,
 			);
 			path = WGPushControllerKitUITests;
+			sourceTree = "<group>";
+		};
+		32C9CE7E213F9BAA00B22E4C /* PushTools */ = {
+			isa = PBXGroup;
+			children = (
+				32C9CE7F213F9C2F00B22E4C /* WGControllerPush.h */,
+				32C9CE80213F9C2F00B22E4C /* WGControllerPush.m */,
+			);
+			path = PushTools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C9CE4E213F843900B22E4C /* ViewController.m in Sources */,
+				325E6E582141196700489A79 /* WGOtherViewController.m in Sources */,
+				325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */,
+				325E6E552141195500489A79 /* WGInitWithViewController.m in Sources */,
 				32C9CE59213F843C00B22E4C /* main.m in Sources */,
 				32C9CE4B213F843900B22E4C /* AppDelegate.m in Sources */,
+				32C9CE81213F9C2F00B22E4C /* WGControllerPush.m in Sources */,
+				325E6E5B21411D1700489A79 /* WGModel.m in Sources */,
+				325E6E522141194400489A79 /* WGProrertyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = WGPushControllerKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +497,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = WGPushControllerKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
