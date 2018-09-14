@@ -75,7 +75,8 @@
                                     WGProperty:@{
                                             @"school":@"太和一中",
                                             @"name":@"小明",
-                                            @"age":@(18)
+                                            @"age":@(18),
+                                            @"height":@(179.12)
                                                      }
                                     };
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGProrertyViewController" paramType:WGPushProperty param:paramDic];
@@ -90,7 +91,7 @@
                                        WGInitWith:@{
                                                @"initWithDic:model:school:":@[
                                                        @{
-                                                           @"height":@(178),
+                                                           @"height":@(179),
                                                            @"address":@"人民路"
                                                         },
                                                        model,
@@ -105,7 +106,7 @@
                                        WGInitWith:@{
                                                @"initWithDic:name:":@[
                                                        @{
-                                                           @"height":@(178),
+                                                           @"height":@(179.12),
                                                            @"address":@"人民路",
                                                            @"hasGirFirend":@(NO)
                                                            },

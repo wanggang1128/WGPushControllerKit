@@ -19,7 +19,7 @@ static WGControllerPush *instance = nil;
     });
     return instance;
 }
-#pragma mark -
+
 - (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon{
     [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil];
 }
@@ -75,11 +75,18 @@ static WGControllerPush *instance = nil;
         SEL method = NSSelectorFromString(selName);
         if ([toCon respondsToSelector:method]) {
             //等价于controller.shuxing = value;
-            //如果是数字则在字典中是NSNumber类型,需要把NSNumber类型转为NSInteger
+            //如果是数字则在字典中是NSNumber类型,需要把NSNumber类型转为NSInteger或者CGFloat
             if ([value isKindOfClass:[NSNumber class]]) {
-                NSInteger val = [(NSNumber *) value integerValue];
-                void (*action)(id, SEL, NSInteger) = (void (*)(id, SEL, NSInteger)) objc_msgSend;
-                action(toCon, method, val);
+                NSString *vale = [(NSNumber *) value stringValue];
+                if ([vale containsString:@"."]) {
+                    CGFloat val = [vale doubleValue];
+                    void (*action)(id, SEL, CGFloat) = (void (*)(id, SEL, CGFloat)) objc_msgSend;
+                    action(toCon, method, val);
+                }else{
+                    NSInteger val = [(NSNumber *) value integerValue];
+                    void (*action)(id, SEL, NSInteger) = (void (*)(id, SEL, NSInteger)) objc_msgSend;
+                    action(toCon, method, val);
+                }
             } else {
                 void (*action)(id, SEL, id) = (void (*)(id, SEL, id)) objc_msgSend;
                 action(toCon, method, value);
@@ -107,10 +114,17 @@ static WGControllerPush *instance = nil;
                     if ([classAlloc respondsToSelector:sel_registerName(ky)]) {
                         id paramOne =  [value objectAtIndex:0];
                         if ([paramOne isKindOfClass:[NSNumber class]]) {
-                            NSInteger val = [(NSNumber *) paramOne integerValue];
-                            id (*action)(id, SEL, NSInteger) = (id(*)(id, SEL, NSInteger)) objc_msgSend;
-                            //等价于[[class alloc] iniWith:]
-                            toCon = action(classAlloc, sel_registerName(ky), val);
+                            NSString *val = [(NSNumber *) paramOne stringValue];
+                            if ([val containsString:@"."]) {
+                                CGFloat vale = [val doubleValue];
+                                id (*action)(id, SEL, CGFloat) = (id(*)(id, SEL, CGFloat)) objc_msgSend;
+                                //等价于[[class alloc] iniWith:]
+                                toCon = action(classAlloc, sel_registerName(ky), vale);
+                            }else{
+                                id (*action)(id, SEL, NSInteger) = (id(*)(id, SEL, NSInteger)) objc_msgSend;
+                                //等价于[[class alloc] iniWith:]
+                                toCon = action(classAlloc, sel_registerName(ky), [val integerValue]);
+                            }
                         }else{
                             id (*action)(id, SEL, id) = (id(*)(id, SEL, id)) objc_msgSend;
                             toCon = action(classAlloc, sel_registerName(ky), paramOne);

@@ -20,7 +20,7 @@
     self.title = @"只有属性传值";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *remindStr = [NSString stringWithFormat:@"name:%@\n-->age:%ld\n-->school:%@",self.name, self.age, self.school];
+    NSString *remindStr = [NSString stringWithFormat:@"name:%@\n-->age:%ld\n-->school:%@\n-->height:%f",self.name, self.age, self.school, self.height];
     
     //我只是为了显示传过来的内容.所以就用UIAlertView了
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"接收过来的值" message:remindStr delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
