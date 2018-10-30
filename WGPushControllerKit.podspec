@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WGPushControllerKit"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "底层实现页面跳转不需要导入头文件,支持多种类型传值(如属性传值)"
 
   s.homepage     = "https://github.com/wanggang1128/WGPushControllerKit"
@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source_files  = "WGPushControllerKit/PushTools/*.{h,m}"
 
   s.requires_arc = true
-  s.framework  = "UIKit"
+  s.frameworks = "UIKit"
 
 end

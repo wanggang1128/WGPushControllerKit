@@ -109,7 +109,7 @@ static WGControllerPush *instance = nil;
             switch (value.count) {
                 case 1: {
                     //先alloc
-                    id classAlloc = objc_msgSend(classCon, sel_registerName("alloc"));
+                    id classAlloc = ((id (*) (id, SEL))objc_msgSend)(classCon, sel_registerName("alloc"));
                     //sel_registerName(ky)等价于@selecter(ky)
                     if ([classAlloc respondsToSelector:sel_registerName(ky)]) {
                         id paramOne =  [value objectAtIndex:0];
@@ -132,7 +132,7 @@ static WGControllerPush *instance = nil;
                     }
                 } break;
                 case 2: {
-                    id classAlloc = objc_msgSend(classCon, sel_registerName("alloc"));
+                    id classAlloc = ((id (*) (id, SEL))objc_msgSend)(classCon, sel_registerName("alloc"));
                     if ([classAlloc respondsToSelector:sel_registerName(ky)]) {
                         id paramOne = [value objectAtIndex:0];
                         id paramTwo = [value objectAtIndex:1];
@@ -141,14 +141,14 @@ static WGControllerPush *instance = nil;
                     }
                 } break;
                 case 3: {
-                    id classAlloc = objc_msgSend(classCon, sel_registerName("alloc"));
+                    id classAlloc = ((id (*) (id, SEL))objc_msgSend)(classCon, sel_registerName("alloc"));
                     if ([classAlloc respondsToSelector:sel_registerName(ky)]) {
                         id (*action)(id, SEL, id, id, id) = (id(*)(id, SEL, id, id, id)) objc_msgSend;
                         toCon = action(classAlloc, sel_registerName(ky), [value objectAtIndex:0], [value objectAtIndex:1], [value objectAtIndex:2]);
                     }
                 } break;
                 case 4: {
-                    id classAlloc = objc_msgSend(classCon, sel_registerName("alloc"));
+                    id classAlloc = ((id (*) (id, SEL))objc_msgSend)(classCon, sel_registerName("alloc"));
                     if ([classAlloc respondsToSelector:sel_registerName(ky)]) {
                         id (*action)(id, SEL, id, id, id, id) = (id(*)(id, SEL, id, id, id, id)) objc_msgSend;
                         toCon = action(classAlloc, sel_registerName(ky), [value objectAtIndex:0], [value objectAtIndex:1], [value objectAtIndex:2], [value objectAtIndex:3]);
