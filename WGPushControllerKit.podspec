@@ -1,10 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "WGPushControllerKit"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "底层实现页面跳转不需要导入头文件,支持多种类型传值(如属性传值)"
-  s.description  = <<-DESC
-                   DESC
 
   s.homepage     = "https://github.com/wanggang1128/WGPushControllerKit"
   s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
