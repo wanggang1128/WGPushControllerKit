@@ -71,46 +71,60 @@
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGNoParamViewController"];
             break;
         }case 1:{
+            //存储属性的字典,属性的名字作为key
+            NSDictionary *propertyDic = @{
+                                          @"name":@"小明",
+                                          @"array":@[@"arr1",@(18.123)],
+                                          @"dictionary":@{@"key1":@"value1", @"key2":@(18.123)},
+                                          @"ageInt":@(18),
+                                          @"ageNSIntager":@(18),
+                                          @"ageCGFloat":@(18.123),
+                                          @"ageNSNumber":@(18.123),
+                                          @"ageNSString":@(18.123),
+                                          @"ageBOOL":@(YES)
+                                          };
+            //外层用@"property"作为key包装,为了识别哪些值需要属性传值
             NSDictionary *paramDic = @{
-                                    WGProperty:@{
-                                            @"school":@"太和一中",
-                                            @"name":@"小明",
-                                            @"age":@(18),
-                                            @"height":@(179.12)
-                                                     }
+                                    WGProperty:propertyDic
                                     };
+            
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGProrertyViewController" paramType:WGPushProperty param:paramDic];
             break;
         }case 2:{
-            
-            
+            //只有init方式传值
             WGModel *model = [[WGModel alloc] init];
             model.name = @"小明";
             model.age = 18;
+            
+            //key是重写init的函数名字,值按照顺序放在一个数组中
+            NSArray *valueArr = @[
+                                  @{
+                                      @"height":@(179),
+                                      @"address":@"人民路"
+                                      },
+                                  model,
+                                  @[@"数组元素",@"18.123"]
+                                  ];
+            
+            NSDictionary *initDic = @{
+                                      @"initWithDic:model:array:":valueArr
+                                      };
+            
             NSDictionary *paramDic = @{
-                                       WGInitWith:@{
-                                               @"initWithDic:model:school:":@[
-                                                       @{
-                                                           @"height":@(179),
-                                                           @"address":@"人民路"
-                                                        },
-                                                       model,
-                                                       @"太和一中"
-                                                       ]
-                                               }
+                                       WGInitWith:initDic
                                        };
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGInitWithViewController" paramType:WGPushInit param:paramDic];
             break;
         }case 3:{
+            
             NSDictionary *paramDic = @{
                                        WGInitWith:@{
-                                               @"initWithDic:name:":@[
+                                               @"initWithDic:":@[
                                                        @{
                                                            @"height":@(179.12),
                                                            @"address":@"人民路",
                                                            @"hasGirFirend":@(NO)
-                                                           },
-                                                       @"小明"
+                                                           }
                                                        ]
                                                },
                                        WGProperty:@{

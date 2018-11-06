@@ -17,10 +17,10 @@
 
 @implementation WGOtherViewController
 
-- (instancetype)initWithDic:(NSDictionary *)dic name:(NSString *) name{
+- (instancetype)initWithDic:(NSDictionary *)dic{
     self = [super init];
     if (self) {
-        self.str = [NSString stringWithFormat:@"dic:%@\n-->name:%@\n", dic, name];
+        self.str = [NSString stringWithFormat:@"dic:%@\n", dic];
 
     }
     return self;

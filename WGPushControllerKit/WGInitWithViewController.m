@@ -16,10 +16,10 @@
 
 @implementation WGInitWithViewController
 
-- (instancetype)initWithDic:(NSDictionary *)dic model:(WGModel *)model school:(NSString *)school{
+- (instancetype)initWithDic:(NSDictionary *)dic model:(WGModel *)model array:(NSString *)array{
     self = [super init];
     if (self) {
-        self.remindStr = [NSString stringWithFormat:@"dic:%@\n-->model.name:%@\n-->model.age:%ld\n-->school:%@", dic, model.name, (long)model.age, school];
+        self.remindStr = [NSString stringWithFormat:@"dic:%@\n-->model.name:%@\n-->model.age:%ld\n-->array:%@", dic, model.name, (long)model.age, array];
     }
     return self;
 }

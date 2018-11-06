@@ -14,6 +14,6 @@
 @property (nonatomic, assign) NSInteger age;
 @property (nonatomic, assign) BOOL isMale;
 
-- (instancetype)initWithDic:(NSDictionary *)dic name:(NSString *) name;
+- (instancetype)initWithDic:(NSDictionary *)dic;
 
 @end

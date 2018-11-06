@@ -11,6 +11,6 @@
 
 @interface WGInitWithViewController : UIViewController
 
-- (instancetype)initWithDic:(NSDictionary *)dic model:(WGModel *)model school:(NSString *)school;
+- (instancetype)initWithDic:(NSDictionary *)dic model:(WGModel *)model array:(NSString *)array;
 
 @end
