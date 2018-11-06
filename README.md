@@ -89,6 +89,7 @@ NSArray *valueArr = @[
 NSDictionary *initDic = @{
                           @"initWithDic:model:array:":valueArr
                           };
+//外层用@"initWith"作为key包装
 NSDictionary *paramDic = @{
                            WGInitWith:initDic
                            };
