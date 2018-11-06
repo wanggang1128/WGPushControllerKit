@@ -121,7 +121,6 @@ NSDictionary *paramDic = @{
                                  },
                          WGProperty:@{
                                  @"school":@"太和一中",
-                                 @"age":@(18),
                                  @"isMale":@(YES)
                                  }
                                        };
