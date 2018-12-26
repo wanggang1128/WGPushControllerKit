@@ -8,8 +8,6 @@
 
 #import "WGControllerPush.h"
 #import <objc/message.h>
-//#include <string.h>
-
 
 @implementation WGControllerPush
 
@@ -30,10 +28,21 @@ static WGControllerPush *instance = nil;
     if (!toCon || toCon.length == 0) {
         return;
     }
+    UIViewController *con = [self getViewControllerWithConName:toCon paramType:type param:paramDic];
+    if (con) {
+        [fromCon.navigationController pushViewController:con animated:YES];
+    }
+}
+
+- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic{
+    
+    if (!conName || conName.length == 0) {
+        return nil;
+    }
     //根据定义好的toCon，拿到类名的字符串
-//    NSString *className = [self getControllerName:toCon];
+    //    NSString *className = [self getControllerName:toCon];
     //根据类名转化为Class类型
-    Class classCon = NSClassFromString(toCon);
+    Class classCon = NSClassFromString(conName);
     //初始化并分配内存
     id con = [[classCon alloc] init];
     //根据HuPushControllerType判断是否有值传到下一页
@@ -54,7 +63,9 @@ static WGControllerPush *instance = nil;
             break;
     }
     if (con) {
-        [fromCon.navigationController pushViewController:con animated:YES];
+        return con;
+    }else{
+        return nil;
     }
 }
 
