@@ -12,6 +12,13 @@
 		325E6E552141195500489A79 /* WGInitWithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E542141195500489A79 /* WGInitWithViewController.m */; };
 		325E6E582141196700489A79 /* WGOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E572141196700489A79 /* WGOtherViewController.m */; };
 		325E6E5B21411D1700489A79 /* WGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E5A21411D1700489A79 /* WGModel.m */; };
+		326DA68A21D390FA004D00E8 /* WGCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA68921D390FA004D00E8 /* WGCustomViewController.m */; };
+		326DA68D21D3927F004D00E8 /* WGOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA68C21D3927F004D00E8 /* WGOneViewController.m */; };
+		326DA69021D3929D004D00E8 /* WGTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA68F21D3929D004D00E8 /* WGTwoViewController.m */; };
+		326DA69321D392AC004D00E8 /* WGThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA69221D392AC004D00E8 /* WGThreeViewController.m */; };
+		326DA69621D392BC004D00E8 /* WGFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA69521D392BC004D00E8 /* WGFourViewController.m */; };
+		326DA69921D392CA004D00E8 /* WGFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA69821D392CA004D00E8 /* WGFiveViewController.m */; };
+		326DA69D21D392F9004D00E8 /* WGSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 326DA69C21D392F9004D00E8 /* WGSixViewController.m */; };
 		32C9CE4B213F843900B22E4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE4A213F843900B22E4C /* AppDelegate.m */; };
 		32C9CE4E213F843900B22E4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C9CE4D213F843900B22E4C /* ViewController.m */; };
 		32C9CE51213F843900B22E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C9CE4F213F843900B22E4C /* Main.storyboard */; };
@@ -51,6 +58,20 @@
 		325E6E572141196700489A79 /* WGOtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGOtherViewController.m; sourceTree = "<group>"; };
 		325E6E5921411D1700489A79 /* WGModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGModel.h; sourceTree = "<group>"; };
 		325E6E5A21411D1700489A79 /* WGModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGModel.m; sourceTree = "<group>"; };
+		326DA68821D390FA004D00E8 /* WGCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGCustomViewController.h; sourceTree = "<group>"; };
+		326DA68921D390FA004D00E8 /* WGCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGCustomViewController.m; sourceTree = "<group>"; };
+		326DA68B21D3927F004D00E8 /* WGOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGOneViewController.h; sourceTree = "<group>"; };
+		326DA68C21D3927F004D00E8 /* WGOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGOneViewController.m; sourceTree = "<group>"; };
+		326DA68E21D3929D004D00E8 /* WGTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTwoViewController.h; sourceTree = "<group>"; };
+		326DA68F21D3929D004D00E8 /* WGTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTwoViewController.m; sourceTree = "<group>"; };
+		326DA69121D392AC004D00E8 /* WGThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGThreeViewController.h; sourceTree = "<group>"; };
+		326DA69221D392AC004D00E8 /* WGThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGThreeViewController.m; sourceTree = "<group>"; };
+		326DA69421D392BC004D00E8 /* WGFourViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGFourViewController.h; sourceTree = "<group>"; };
+		326DA69521D392BC004D00E8 /* WGFourViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGFourViewController.m; sourceTree = "<group>"; };
+		326DA69721D392CA004D00E8 /* WGFiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGFiveViewController.h; sourceTree = "<group>"; };
+		326DA69821D392CA004D00E8 /* WGFiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGFiveViewController.m; sourceTree = "<group>"; };
+		326DA69B21D392F9004D00E8 /* WGSixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSixViewController.h; sourceTree = "<group>"; };
+		326DA69C21D392F9004D00E8 /* WGSixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSixViewController.m; sourceTree = "<group>"; };
 		32C9CE46213F843900B22E4C /* WGPushControllerKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGPushControllerKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C9CE49213F843900B22E4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32C9CE4A213F843900B22E4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +117,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		326DA68621D39077004D00E8 /* demo01 */ = {
+			isa = PBXGroup;
+			children = (
+				325E6E4D2141192D00489A79 /* WGNoParamViewController.h */,
+				325E6E4E2141192D00489A79 /* WGNoParamViewController.m */,
+				325E6E502141194300489A79 /* WGProrertyViewController.h */,
+				325E6E512141194300489A79 /* WGProrertyViewController.m */,
+				325E6E532141195500489A79 /* WGInitWithViewController.h */,
+				325E6E542141195500489A79 /* WGInitWithViewController.m */,
+				325E6E562141196700489A79 /* WGOtherViewController.h */,
+				325E6E572141196700489A79 /* WGOtherViewController.m */,
+			);
+			path = demo01;
+			sourceTree = "<group>";
+		};
+		326DA68721D390AB004D00E8 /* demo02 */ = {
+			isa = PBXGroup;
+			children = (
+				326DA69E21D39300004D00E8 /* subController */,
+				326DA68821D390FA004D00E8 /* WGCustomViewController.h */,
+				326DA68921D390FA004D00E8 /* WGCustomViewController.m */,
+			);
+			path = demo02;
+			sourceTree = "<group>";
+		};
+		326DA69E21D39300004D00E8 /* subController */ = {
+			isa = PBXGroup;
+			children = (
+				326DA68B21D3927F004D00E8 /* WGOneViewController.h */,
+				326DA68C21D3927F004D00E8 /* WGOneViewController.m */,
+				326DA68E21D3929D004D00E8 /* WGTwoViewController.h */,
+				326DA68F21D3929D004D00E8 /* WGTwoViewController.m */,
+				326DA69121D392AC004D00E8 /* WGThreeViewController.h */,
+				326DA69221D392AC004D00E8 /* WGThreeViewController.m */,
+				326DA69421D392BC004D00E8 /* WGFourViewController.h */,
+				326DA69521D392BC004D00E8 /* WGFourViewController.m */,
+				326DA69721D392CA004D00E8 /* WGFiveViewController.h */,
+				326DA69821D392CA004D00E8 /* WGFiveViewController.m */,
+				326DA69B21D392F9004D00E8 /* WGSixViewController.h */,
+				326DA69C21D392F9004D00E8 /* WGSixViewController.m */,
+			);
+			path = subController;
+			sourceTree = "<group>";
+		};
 		32C9CE3D213F843900B22E4C = {
 			isa = PBXGroup;
 			children = (
@@ -119,19 +184,13 @@
 		32C9CE48213F843900B22E4C /* WGPushControllerKit */ = {
 			isa = PBXGroup;
 			children = (
+				326DA68721D390AB004D00E8 /* demo02 */,
+				326DA68621D39077004D00E8 /* demo01 */,
 				32C9CE7E213F9BAA00B22E4C /* PushTools */,
 				32C9CE49213F843900B22E4C /* AppDelegate.h */,
 				32C9CE4A213F843900B22E4C /* AppDelegate.m */,
 				32C9CE4C213F843900B22E4C /* ViewController.h */,
 				32C9CE4D213F843900B22E4C /* ViewController.m */,
-				325E6E4D2141192D00489A79 /* WGNoParamViewController.h */,
-				325E6E4E2141192D00489A79 /* WGNoParamViewController.m */,
-				325E6E502141194300489A79 /* WGProrertyViewController.h */,
-				325E6E512141194300489A79 /* WGProrertyViewController.m */,
-				325E6E532141195500489A79 /* WGInitWithViewController.h */,
-				325E6E542141195500489A79 /* WGInitWithViewController.m */,
-				325E6E562141196700489A79 /* WGOtherViewController.h */,
-				325E6E572141196700489A79 /* WGOtherViewController.m */,
 				325E6E5921411D1700489A79 /* WGModel.h */,
 				325E6E5A21411D1700489A79 /* WGModel.m */,
 				32C9CE4F213F843900B22E4C /* Main.storyboard */,
@@ -301,12 +360,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C9CE4E213F843900B22E4C /* ViewController.m in Sources */,
+				326DA69D21D392F9004D00E8 /* WGSixViewController.m in Sources */,
+				326DA69321D392AC004D00E8 /* WGThreeViewController.m in Sources */,
+				326DA68A21D390FA004D00E8 /* WGCustomViewController.m in Sources */,
+				326DA68D21D3927F004D00E8 /* WGOneViewController.m in Sources */,
+				326DA69021D3929D004D00E8 /* WGTwoViewController.m in Sources */,
 				325E6E582141196700489A79 /* WGOtherViewController.m in Sources */,
 				325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */,
 				325E6E552141195500489A79 /* WGInitWithViewController.m in Sources */,
+				326DA69621D392BC004D00E8 /* WGFourViewController.m in Sources */,
 				32C9CE59213F843C00B22E4C /* main.m in Sources */,
 				32C9CE4B213F843900B22E4C /* AppDelegate.m in Sources */,
 				32C9CE81213F9C2F00B22E4C /* WGControllerPush.m in Sources */,
+				326DA69921D392CA004D00E8 /* WGFiveViewController.m in Sources */,
 				325E6E5B21411D1700489A79 /* WGModel.m in Sources */,
 				325E6E522141194400489A79 /* WGProrertyViewController.m in Sources */,
 			);
