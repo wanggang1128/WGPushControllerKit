@@ -1,6 +1,10 @@
 # WGPushControllerKit
 这是一个底层实现页面跳转的工具，通过该工具可以不再import将要跳转页面的头文件，支持常用传值；可以降低文件之间的耦合；有助于组件化；支持个性化配置九宫格菜单
 
+## 效果
+
+![](https://github.com/wanggang1128/WGPushControllerKit/raw/master/WGPushControllerKit/demo.gif)
+
 集成方法：
 -----
 
