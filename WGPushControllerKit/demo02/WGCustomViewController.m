@@ -73,6 +73,8 @@
 //九宫格按钮功能点击(跳转到对应页面)
 - (void)btnClicked:(UIButton *)sender{
     
+#warning 看到没,核心代码就这一句即可完成所有功能跳转
+    
     NSDictionary *dic = self.dataArr[sender.tag];
     NSString *controllerName = [self getControllerName:dic[@"code"]];
     [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:controllerName];
