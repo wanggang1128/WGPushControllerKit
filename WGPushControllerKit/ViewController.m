@@ -43,7 +43,7 @@
 }
 
 - (void)loadData{
-    self.dataArr = @[@"不传值", @"只有属性传值", @"只有initWith传值", @"既有property又有initWith方式传值", @"后台九宫格"];
+    self.dataArr = @[@"不传值", @"只有属性传值", @"只有initWith传值", @"既有property又有initWith方式传值", @"xib页面", @"后台九宫格"];
 }
 
 #pragma mark -<UITableViewDelegate, UITableViewDataSource>
@@ -136,7 +136,21 @@
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGOtherViewController" paramType:WGPushOther param:paramDic];
             break;
         }case 4:{
+            
+            NSDictionary *dic = @{
+                                  WGProperty:@{
+                                          @"age":@(18)
+                                          },
+                                  WGInitWith:@{
+                                          @"initWithName:":@[@"寒江"]
+                                          }
+                                  };
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGXibViewController" paramType:WGPushOther param:dic];
+            
+            break;
+        }case 5:{
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGCustomViewController"];
+            
             break;
         }
         default:

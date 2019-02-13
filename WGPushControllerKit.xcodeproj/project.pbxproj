@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325AABCF2213B3B3009A92EE /* WGXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325AABCD2213B3B3009A92EE /* WGXibViewController.m */; };
+		325AABD02213B3B3009A92EE /* WGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325AABCE2213B3B3009A92EE /* WGXibViewController.xib */; };
 		325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E4E2141192D00489A79 /* WGNoParamViewController.m */; };
 		325E6E522141194400489A79 /* WGProrertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E512141194300489A79 /* WGProrertyViewController.m */; };
 		325E6E552141195500489A79 /* WGInitWithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E542141195500489A79 /* WGInitWithViewController.m */; };
@@ -48,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		325AABCC2213B3B3009A92EE /* WGXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGXibViewController.h; sourceTree = "<group>"; };
+		325AABCD2213B3B3009A92EE /* WGXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGXibViewController.m; sourceTree = "<group>"; };
+		325AABCE2213B3B3009A92EE /* WGXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WGXibViewController.xib; sourceTree = "<group>"; };
 		325E6E4D2141192D00489A79 /* WGNoParamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGNoParamViewController.h; sourceTree = "<group>"; };
 		325E6E4E2141192D00489A79 /* WGNoParamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGNoParamViewController.m; sourceTree = "<group>"; };
 		325E6E502141194300489A79 /* WGProrertyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGProrertyViewController.h; sourceTree = "<group>"; };
@@ -128,6 +133,9 @@
 				325E6E542141195500489A79 /* WGInitWithViewController.m */,
 				325E6E562141196700489A79 /* WGOtherViewController.h */,
 				325E6E572141196700489A79 /* WGOtherViewController.m */,
+				325AABCC2213B3B3009A92EE /* WGXibViewController.h */,
+				325AABCD2213B3B3009A92EE /* WGXibViewController.m */,
+				325AABCE2213B3B3009A92EE /* WGXibViewController.xib */,
 			);
 			path = demo01;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325AABD02213B3B3009A92EE /* WGXibViewController.xib in Resources */,
 				32C9CE56213F843C00B22E4C /* LaunchScreen.storyboard in Resources */,
 				32C9CE53213F843C00B22E4C /* Assets.xcassets in Resources */,
 				32C9CE51213F843900B22E4C /* Main.storyboard in Resources */,
@@ -364,6 +373,7 @@
 				326DA69321D392AC004D00E8 /* WGThreeViewController.m in Sources */,
 				326DA68A21D390FA004D00E8 /* WGCustomViewController.m in Sources */,
 				326DA68D21D3927F004D00E8 /* WGOneViewController.m in Sources */,
+				325AABCF2213B3B3009A92EE /* WGXibViewController.m in Sources */,
 				326DA69021D3929D004D00E8 /* WGTwoViewController.m in Sources */,
 				325E6E582141196700489A79 /* WGOtherViewController.m in Sources */,
 				325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */,
