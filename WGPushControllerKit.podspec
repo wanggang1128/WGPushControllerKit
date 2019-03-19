@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WGPushControllerKit"
-  s.version      = "1.0.9"
+  s.version      = "1.1.1"
   s.summary      = "底层实现页面跳转不需要导入头文件,支持swift类页面跳转"
 
   s.homepage     = "https://github.com/wanggang1128/WGPushControllerKit"

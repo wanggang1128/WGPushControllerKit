@@ -77,7 +77,7 @@
     
     NSDictionary *dic = self.dataArr[sender.tag];
     NSString *controllerName = [self getControllerName:dic[@"code"]];
-    [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:controllerName];
+    [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:controllerName projName:nil];
 }
 
 //根据后台返回的页面ID得到类名字

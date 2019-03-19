@@ -20,33 +20,29 @@ static WGControllerPush *instance = nil;
     return instance;
 }
 
-- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon{
-    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil appName:nil];
-}
-
-- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon appName:(NSString *)appName{
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon projName:(NSString *)projName{
     
-    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil appName:appName];
+    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil projName:projName];
 }
 
-- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName{
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic projName:(NSString *)projName{
     if (!toCon || toCon.length == 0) {
         return;
     }
-    UIViewController *con = [self getViewControllerWithConName:toCon paramType:type param:paramDic appName:appName];
+    UIViewController *con = [self getViewControllerWithConName:toCon paramType:type param:paramDic projName:projName];
     if (con) {
         [fromCon.navigationController pushViewController:con animated:YES];
     }
 }
 
-- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName{
+- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic projName:(NSString *)projName{
     
     if (!conName || conName.length == 0) {
         return nil;
     }
     NSString *targetStr = nil;
-    if (appName && appName.length>0) {
-        targetStr = [NSString stringWithFormat:@"%@.%@",appName, conName];
+    if (projName && projName.length>0) {
+        targetStr = [NSString stringWithFormat:@"%@.%@",projName, conName];
     }else{
         targetStr = conName;
     }
