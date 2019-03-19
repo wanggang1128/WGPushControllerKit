@@ -35,6 +35,16 @@ typedef NS_ENUM(NSInteger , WGPushControllerType) {
  */
 - (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon;
 
+
+/**
+ swift类,不需要传值页面跳转
+
+ @param fromCon 当前页面
+ @param toCon push到的页面
+ @param appName 工程名字
+ */
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon appName:(NSString *)appName;
+
 #pragma mark -需要传值的话直接调这个接口
 
 /**
@@ -44,8 +54,9 @@ typedef NS_ENUM(NSInteger , WGPushControllerType) {
  @param toCon push到的页面
  @param type push页面传值类型
  @param paramDic 传值字典
+ @param appName 工程名字
  */
-- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic;
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName;
 
 /**
  根据类名字获取其对应的UIViewController
@@ -54,6 +65,6 @@ typedef NS_ENUM(NSInteger , WGPushControllerType) {
  @param paramDic 传值字典
  @return 类对象
  */
-- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic;
+- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName;
 
 @end

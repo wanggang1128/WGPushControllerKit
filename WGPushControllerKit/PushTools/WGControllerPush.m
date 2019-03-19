@@ -21,28 +21,38 @@ static WGControllerPush *instance = nil;
 }
 
 - (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon{
-    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil];
+    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil appName:nil];
 }
 
-- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic{
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon appName:(NSString *)appName{
+    
+    [self pushFromController:fromCon toCon:toCon paramType:WGPushNoParam param:nil appName:appName];
+}
+
+- (void)pushFromController:(UIViewController *)fromCon toCon:(NSString *)toCon paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName{
     if (!toCon || toCon.length == 0) {
         return;
     }
-    UIViewController *con = [self getViewControllerWithConName:toCon paramType:type param:paramDic];
+    UIViewController *con = [self getViewControllerWithConName:toCon paramType:type param:paramDic appName:appName];
     if (con) {
         [fromCon.navigationController pushViewController:con animated:YES];
     }
 }
 
-- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic{
+- (UIViewController *)getViewControllerWithConName:(NSString *)conName paramType:(WGPushControllerType)type param:(NSDictionary *)paramDic appName:(NSString *)appName{
     
     if (!conName || conName.length == 0) {
         return nil;
     }
-    //根据定义好的toCon，拿到类名的字符串
-    //    NSString *className = [self getControllerName:toCon];
+    NSString *targetStr = nil;
+    if (appName && appName.length>0) {
+        targetStr = [NSString stringWithFormat:@"%@.%@",appName, conName];
+    }else{
+        targetStr = conName;
+    }
+    
     //根据类名转化为Class类型
-    Class classCon = NSClassFromString(conName);
+    Class classCon = NSClassFromString(targetStr);
     //初始化并分配内存
     id con = [[classCon alloc] init];
     //根据HuPushControllerType判断是否有值传到下一页

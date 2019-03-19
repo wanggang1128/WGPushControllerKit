@@ -43,7 +43,7 @@
 }
 
 - (void)loadData{
-    self.dataArr = @[@"不传值", @"只有属性传值", @"只有initWith传值", @"既有property又有initWith方式传值", @"xib页面", @"后台九宫格"];
+    self.dataArr = @[@"不传值", @"只有属性传值", @"只有initWith传值", @"既有property又有initWith方式传值", @"xib页面", @"swift页面", @"后台九宫格"];
 }
 
 #pragma mark -<UITableViewDelegate, UITableViewDataSource>
@@ -88,7 +88,7 @@
                                     WGProperty:propertyDic
                                     };
             
-            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGProrertyViewController" paramType:WGPushProperty param:paramDic];
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGProrertyViewController" paramType:WGPushProperty param:paramDic appName:nil];
             break;
         }case 2:{
             //只有init方式传值
@@ -113,7 +113,7 @@
             NSDictionary *paramDic = @{
                                        WGInitWith:initDic
                                        };
-            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGInitWithViewController" paramType:WGPushInit param:paramDic];
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGInitWithViewController" paramType:WGPushInit param:paramDic appName:nil];
             break;
         }case 3:{
             
@@ -133,7 +133,7 @@
                                                @"isMale":@(YES)
                                                }
                                        };
-            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGOtherViewController" paramType:WGPushOther param:paramDic];
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGOtherViewController" paramType:WGPushOther param:paramDic appName:nil];
             break;
         }case 4:{
             
@@ -145,10 +145,15 @@
                                           @"initWithName:":@[@"寒江"]
                                           }
                                   };
-            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGXibViewController" paramType:WGPushOther param:dic];
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGXibViewController" paramType:WGPushOther param:dic appName:nil];
             
             break;
         }case 5:{
+            NSString *appName = [NSBundle mainBundle].infoDictionary[@"CFBundleExecutable"];
+            [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGSwiftViewController" appName:appName];
+            
+            break;
+        }case 6:{
             [[WGControllerPush WGControllerPushShare] pushFromController:self toCon:@"WGCustomViewController"];
             
             break;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322DE8F12240E05B00CD4B10 /* WGSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322DE8F02240E05B00CD4B10 /* WGSwiftViewController.swift */; };
 		325AABCF2213B3B3009A92EE /* WGXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325AABCD2213B3B3009A92EE /* WGXibViewController.m */; };
 		325AABD02213B3B3009A92EE /* WGXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 325AABCE2213B3B3009A92EE /* WGXibViewController.xib */; };
 		325E6E4F2141192D00489A79 /* WGNoParamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E6E4E2141192D00489A79 /* WGNoParamViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		322DE8EF2240E05A00CD4B10 /* WGPushControllerKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WGPushControllerKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		322DE8F02240E05B00CD4B10 /* WGSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGSwiftViewController.swift; sourceTree = "<group>"; };
 		325AABCC2213B3B3009A92EE /* WGXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGXibViewController.h; sourceTree = "<group>"; };
 		325AABCD2213B3B3009A92EE /* WGXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGXibViewController.m; sourceTree = "<group>"; };
 		325AABCE2213B3B3009A92EE /* WGXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WGXibViewController.xib; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				325AABCC2213B3B3009A92EE /* WGXibViewController.h */,
 				325AABCD2213B3B3009A92EE /* WGXibViewController.m */,
 				325AABCE2213B3B3009A92EE /* WGXibViewController.xib */,
+				322DE8F02240E05B00CD4B10 /* WGSwiftViewController.swift */,
+				322DE8EF2240E05A00CD4B10 /* WGPushControllerKit-Bridging-Header.h */,
 			);
 			path = demo01;
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 				TargetAttributes = {
 					32C9CE45213F843900B22E4C = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 					32C9CE5D213F843C00B22E4C = {
 						CreatedOnToolsVersion = 9.4;
@@ -384,6 +390,7 @@
 				32C9CE81213F9C2F00B22E4C /* WGControllerPush.m in Sources */,
 				326DA69921D392CA004D00E8 /* WGFiveViewController.m in Sources */,
 				325E6E5B21411D1700489A79 /* WGModel.m in Sources */,
+				322DE8F12240E05B00CD4B10 /* WGSwiftViewController.swift in Sources */,
 				325E6E522141194400489A79 /* WGProrertyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -563,6 +571,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanggang.WGPushControllerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WGPushControllerKit/demo01/WGPushControllerKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -571,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
@@ -581,6 +593,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanggang.WGPushControllerKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WGPushControllerKit/demo01/WGPushControllerKit-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -588,6 +602,7 @@
 		32C9CE76213F843C00B22E4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
@@ -607,6 +622,7 @@
 		32C9CE77213F843C00B22E4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
@@ -626,6 +642,7 @@
 		32C9CE79213F843C00B22E4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
 				INFOPLIST_FILE = WGPushControllerKitUITests/Info.plist;
@@ -644,6 +661,7 @@
 		32C9CE7A213F843C00B22E4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49T87S5RLN;
 				INFOPLIST_FILE = WGPushControllerKitUITests/Info.plist;
