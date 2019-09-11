@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger , WGPushControllerType) {
 
 #pragma mark -不需要传值的话直接调这个接口
 /**
- swift类,不需要传值页面跳转
+ 不需要传值
 
  @param fromCon 当前页面
  @param toCon push到的页面
@@ -40,7 +40,7 @@ typedef NS_ENUM(NSInteger , WGPushControllerType) {
 #pragma mark -需要传值的话直接调这个接口
 
 /**
- 通用页面跳转
+ 通用页面跳转-需要传值时
 
  @param fromCon 当前页面
  @param toCon push到的页面
